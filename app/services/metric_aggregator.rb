@@ -19,7 +19,7 @@ class MetricAggregator
   def increment_counters(redis)
     redis.incr('metrics:events:total')
     redis.incr("metrics:events:by_type:#{@event.event_type}")
-    hour_key = Time.current.beginning_of_hour.to_i
+    hour_key = @event.processed_at.beginning_of_hour.to_i
     redis.incr("metrics:events:hourly:#{hour_key}")
     redis.expire("metrics:events:hourly:#{hour_key}", 25.hours.to_i)
   end

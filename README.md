@@ -2,6 +2,8 @@
 
 A demonstration of event-driven architecture using Ruby on Rails, Kafka, and Karafka.
 
+![Metrics Dashboard](docs/dashboard-screenshot.png)
+
 ## Overview
 
 This application demonstrates high-throughput event processing patterns:
@@ -27,7 +29,7 @@ This application demonstrates high-throughput event processing patterns:
 - **Metrics Store:** Redis
 
 ## Architecture
-![Architecture Diagram](architecture.png)
+![Architecture Diagram](docs/architecture.png)
 
 
 Events flow through the system asynchronously, allowing for:
@@ -155,6 +157,7 @@ This is a **demonstration project**. For production use, things to consider woul
 - [ ] Performance tuning for your workload
 - [ ] Security hardening
 - [ ] Proper secret management
+- [ ] Recalculating Redis metrics after downtime
 
 ## Scaling Strategies
 
