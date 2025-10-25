@@ -1,0 +1,2 @@
+class EventMetric < ApplicationRecord
+end
